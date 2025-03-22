@@ -150,4 +150,25 @@ body {
     #bg-image {
         background-size: cover;
     }
+
+    #links>a {
+        padding: 5vw;
+        border: 1vw solid antiquewhite;
+        background-size: 5vw;
+    }
+
+    #main-icon {
+        width: 33vw;
+        height: 33vw;
+        border-radius: 33vw;
+    }
+
+    #icon-container {
+        width: 33vw;
+        height: 33vw;
+    }
+
+    #header {
+        margin-top: -5vh;
+    }
 }
