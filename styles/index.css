@@ -171,4 +171,8 @@ body {
     #header {
         margin-top: -5vh;
     }
+
+    html {
+        font-size: larger;
+    }
 }
