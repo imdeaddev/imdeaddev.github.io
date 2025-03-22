@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>DeadDev</title>
+    <style>
+        html,
+        body {
+            min-width: 100%;
+            min-height: 100%;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            user-select: none;
+        }
+
+        #content-bg {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        #content {
+            color: white;
+            z-index: 1;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #bg-image {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            background-image: url("images/favicon.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            filter: invert(100%) blur(20px) brightness(20%) invert(15%);
+            -webkit-filter: invert(100%) blur(20px) brightness(20%) invert(15%);
+        }
+
+        #links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #links>a {
+            padding: 30px;
+            background-color: antiquewhite;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: 5px solid antiquewhite;
+            transition: scale 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+            border-radius: 100px;
+            background-size: 35px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #links>a:hover {
+            scale: 120%;
+            background-color: azure;
+            border-color: azure;
+        }
+
+        #title {
+            margin-left: 2vw;
+            padding: 0;
+        }
+
+        #title>h1,
+        #title>p {
+            margin: 0;
+            text-align: center;
+        }
+
+        #header {
+            margin-top: -10vh;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5vh;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #icon-container {
+            width: 128px;
+            height: 128px;
+            overflow: visible;
+        }
+
+        #main-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 100px;
+            filter: brightness(75%);
+            -webkit-filter: brightness(75%);
+        }
+
+        .icon-info {
+            color: aliceblue;
+            position: absolute;
+            width: 250px;
+            margin-left: -70px;
+            padding-top: 15px;
+            margin-top: -15px;
+            z-index: 5000;
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+            pointer-events: none;
+        }
+
+        .icon-info>div {
+            background-color: #010203;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        #main-icon:hover+.icon-info,
+        .icon-info:hover {
+            opacity: 100%;
+            pointer-events: inherit;
+        }
+
+        @media screen and (max-width: 600px) {
+            #header {
+                flex-direction: column;
+            }
+
+            #links {
+                flex-direction: column;
+            }
+
+            #links>a {
+                margin: 1vh;
+            }
+
+            #bg-image {
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content-bg">
+        <div id="bg-image"></div>
+    </div>
+
+    <div id="content">
+        <div id="header">
+            <div id="icon-container">
+                <img src="images/favicon.jpg" alt="Icon" id="main-icon" />
+                <div class="icon-info">
+                    <div style="text-align: justify;">
+                        By: unknown artist :/ 
+                        <br/>
+                        Sorry, IDK who made this awesome art, pls contact me if you done this
+                    </div>
+                </div>
+            </div>
+            <div id="title">
+                <h1>
+                    DeadDev
+                </h1>
+                <p>Indie game developer</p>
+            </div>
+        </div>
+        <div id="links">
+            <a href="https://www.youtube.com/@imdeaddev"
+                style="background-image: url('images/youtube_social_icon_dark.png');"></a>
+            <a href="http://imdeaddev.itch.io/"
+                style="background-image: url('images/itchio-logo-textless-black.png');"></a>
+            <a href="https://github.com/imdeaddev/" style="background-image: url('images/github-mark.png');"></a>
+        </div>
+    </div>
+</body>
+
+</html>
